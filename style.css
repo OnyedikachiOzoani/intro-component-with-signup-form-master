@@ -1,0 +1,240 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+	--Red: hsl(0, 100%, 74%);
+	--Dark-Blue: hsl(249, 10%, 26%);
+	--Grayish-Blue: hsl(246, 25%, 77%);
+	--Blue: hsl(248, 32%, 49%);
+	--Green: hsl(154, 59%, 51%);
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+	background-color: var(--Red);
+	background-image: url(./images/bg-intro-mobile.png);
+	font-family: "Poppins", sans-serif;
+}
+
+.transitioned-state {
+	transition: all 0.25s ease-in-out;
+}
+
+/* page main section */
+.main-container {
+	padding-inline: 1.5rem;
+	margin-bottom: 3.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.main-container > * {
+	flex: 1;
+}
+
+/* hero section */
+.hero-section {
+	margin-top: 5.5rem;
+	margin-inline: auto;
+	max-width: 39.71rem;
+	color: white;
+	text-align: center;
+}
+
+.hero-section h1 {
+	font-size: 1.6rem;
+	padding-inline: 2rem;
+}
+
+.hero-section p {
+	color: hsla(0, 0%, 100%, 0.9);
+}
+
+/* subscription section */
+.subscription-section {
+	width: 100%;
+	max-width: 24.167rem;
+}
+
+.subscription-details {
+	background-color: var(--Blue);
+	color: white;
+	padding: 1.5rem 4rem;
+	text-align: center;
+	border-radius: 0.5rem;
+	font-size: 0.9rem;
+	box-shadow: 0 0.5rem 0rem hsla(249, 10%, 26%, 0.3);
+	margin-bottom: 1.5rem;
+}
+
+.subscription-details span {
+	color: hsla(0, 0%, 100%, 0.8);
+}
+
+/* sign-up card */
+.signup-card {
+	background-color: white;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.5rem 0rem hsla(249, 10%, 26%, 0.2);
+}
+
+.terms-agreement {
+	font-size: 0.7rem;
+	text-align: center;
+	color: var(--Grayish-Blue);
+	margin-bottom: 0;
+}
+
+.terms-agreement a {
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--Red);
+}
+
+/* Signup form */
+
+.fieldset-wrapper {
+	margin: 0;
+	margin-bottom: 1rem;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.user-details-input {
+	display: block;
+	padding: 1.2rem;
+	border: 1.35px solid hsla(246, 25%, 77%, 0.5);
+	border-radius: 0.3rem;
+	width: 100%;
+	margin-inline: auto;
+	box-sizing: border-box;
+	position: relative;
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+
+.user-details-input.required:invalid {
+	border: 2px solid var(--Red);
+	background-image: none !important;
+}
+
+.user-details-input.required:invalid::placeholder {
+	opacity: 0;
+}
+
+.user-details-input[type="email"].required:invalid::placeholder {
+	opacity: 1;
+	color: var(--Red);
+}
+
+.user-details-input.required:focus {
+	outline: none;
+}
+
+.user-input-container {
+	position: relative;
+}
+
+.error-alert-container {
+	text-align: right;
+	color: red;
+	display: none;
+}
+
+.error-alert-container.active {
+	display: block;
+}
+
+.error-alert-container span {
+	font-size: 0.7rem;
+	font-style: italic;
+}
+
+.error-alert-container i {
+	font-size: 1.4rem;
+	position: absolute;
+	top: 1.033rem;
+	right: 7%;
+	z-index: 2;
+}
+
+.hide-mail-icon {
+	display: inline-block;
+	position: absolute;
+	top: 1.033rem;
+	right: 3%;
+	width: 1.313rem;
+	height: 1.313rem;
+	background-color: white;
+	z-index: 0;
+}
+
+.submit-btn {
+	display: block;
+	background-color: var(--Green);
+	color: hsla(0, 0%, 100%, 0.85);
+	border: none;
+	width: 100%;
+	margin-inline: auto;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 1.2rem;
+	border-radius: 0.3rem;
+	border-bottom: 4px solid hsla(0, 0%, 0%, 0.15);
+	cursor: pointer;
+}
+
+.submit-btn:is(:hover, :active) {
+	background-color: hsla(154, 59%, 51%, 0.8);
+}
+
+/* media breakpoints */
+@media (min-width: 768px) {
+	/* main container */
+	.main-container {
+		flex-direction: row;
+		align-items: center;
+		padding: 7rem;
+		margin-bottom: 0;
+		gap: 4rem;
+	}
+
+	/* hero section */
+	.hero-section {
+		margin-top: 0;
+		max-width: none;
+		text-align: left;
+	}
+
+	.hero-section h1 {
+		padding: 0;
+		font-size: 2.5rem;
+	}
+
+	/* subscription section */
+	.subscription-section {
+		max-width: none;
+	}
+}
+
+/* footer - credits */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	color: var(--Green);
+}
+.attribution a {
+	color: var(--Blue);
+}

@@ -1,0 +1,151 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Intro component with sign up form</title>
+
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<main role="main">
+			<div class="main-container">
+				<div class="hero-section">
+					<h1>Learn to code by watching others </h1>
+					<p
+						>See how experienced developers solve problems in
+						real-time. Watching scripted tutorials is great, but
+						understanding how developers think is invaluable.</p
+					>
+				</div>
+
+				<!-- subscription section -->
+				<div class="subscription-section">
+					<p class="subscription-details">
+						<strong>Try it free 7 days</strong>
+						<span>then $20/mo. thereafter</span></p
+					>
+
+					<div class="signup-card">
+						<form
+							action="#"
+							id="signup-form"
+							class="signup-form"
+							novalidate>
+							<fieldset class="fieldset-wrapper">
+								<div class="user-input-container">
+									<input
+										required
+										class="user-details-input transition-state"
+										type="text"
+										name="firstname"
+										id="firstname"
+										placeholder="First Name"
+										minlength="2"
+										maxlength="40" />
+
+									<div class="error-alert-container">
+										<span>First Name cannot be empty</span>
+										<i class="ri-error-warning-fill"></i>
+									</div>
+								</div>
+								<div class="user-input-container">
+									<input
+										required
+										class="user-details-input transition-state"
+										type="text"
+										name="lastname"
+										id="lastname"
+										placeholder="Last Name"
+										minlength="2"
+										maxlength="40" />
+
+									<div class="error-alert-container">
+										<span>Last Name cannot be empty</span>
+										<i class="ri-error-warning-fill"></i>
+									</div>
+								</div>
+								<div class="user-input-container">
+									<input
+										required
+										class="user-details-input transition-state"
+										type="email"
+										name="email"
+										id="email"
+										placeholder="Email Address"
+										minlength="5"
+										pattern="[A-Za-z0-9]+([.-_]?[A-Za-z0-9]+)*@[A-Za-z0-9]+(-?[A-Za-z0-9]+)*\.[A-Za-z]{2,}" />
+
+									<div class="error-alert-container">
+										<span
+											>Looks like this is not an
+											email</span
+										>
+										<i class="ri-error-warning-fill"></i>
+										<span class="hide-mail-icon"></span>
+									</div>
+								</div>
+								<div class="user-input-container">
+									<input
+										required
+										class="user-details-input transition-state"
+										type="password"
+										name="password"
+										id="password"
+										placeholder="Password"
+										minlength="8"
+										pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}" />
+
+									<div class="error-alert-container">
+										<span>Password cannot be empty</span>
+										<i class="ri-error-warning-fill"></i>
+									</div>
+								</div>
+							</fieldset>
+
+							<button
+								type="submit"
+								class="submit-btn transitioned-state"
+								>Claim your free trial</button
+							>
+						</form>
+
+						<p class="terms-agreement"
+							>By clicking the button, you are agreeing to our
+							<a href="#">Terms and Services</a></p
+						>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<p class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="frontend-mentor"
+					>Frontend Mentor</a
+				>. Coded by
+				<a href="https://github.com/OnyedikachiOzoani" target="github"
+					>Onyedikachi Ozoani</a
+				>.
+			</p>
+		</footer>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
