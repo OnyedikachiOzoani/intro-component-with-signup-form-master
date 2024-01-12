@@ -201,7 +201,7 @@ body {
 }
 
 /* media breakpoints */
-@media (min-width: 768px) {
+@media (min-width: 950px) {
 	/* main container */
 	.main-container {
 		flex-direction: row;
