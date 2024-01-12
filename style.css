@@ -124,6 +124,10 @@ body {
 	font-weight: bold;
 }
 
+.user-details-input:focus {
+	outline: 2px solid var(--Green);
+}
+
 .user-details-input.required:invalid {
 	border: 2px solid var(--Red);
 	background-image: none !important;
