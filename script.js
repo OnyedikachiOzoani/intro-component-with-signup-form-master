@@ -103,7 +103,7 @@ function showFormError(input) {
 		input.setAttribute("placeholder", "email@example/com");
 	} else if (input.validity.patternMismatch && input.type === "password") {
 		errorMessage.textContent =
-			"password must contain must contain a capital and a small letter, a number, and any special characters";
+			"password must contain a capital and a small letter, a number, and any special characters";
 	}
 
 	// add classes to display errors
